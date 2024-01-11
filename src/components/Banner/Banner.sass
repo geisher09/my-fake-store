@@ -1,0 +1,25 @@
+.banner
+  position: relative
+  z-index: 2
+  background: var(--dark)
+  color: var(--white)
+  padding: 12px 20px
+  span
+    display: block
+    font-size: 12px
+    font-weight: 400
+  .icon-text
+    cursor: pointer
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      border-right: 1px solid var(--text-3)
+      padding-right: 16px
+    &:not(:first-child)
+      padding-left: 16px
+    i
+      margin-right: 6px
+    span
+      display: none
+      @media (min-width: 768px)
+        display: block
