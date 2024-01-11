@@ -36,7 +36,8 @@
                   class="mb-3"
                   :src="product.image"
                   :alt="product.title"
-                  width="90">
+                  width="90"
+                  loading="lazy">
                 <div class="product-info">
                   <div class="product-title mb-2">
                     {{ product.title }}
@@ -126,8 +127,8 @@ const init = async () => {
   products.value = await products_response.json();
   filteredProducts.value = products.value;
 
-  const categories_ = await fetch('https://fakestoreapi.com/products/categories');
-  categories.value = await categories_.json();
+  const categories_response = await fetch('https://fakestoreapi.com/products/categories');
+  categories.value = await categories_response.json();
 
   initializing.value = false;
 };

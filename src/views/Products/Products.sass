@@ -6,6 +6,7 @@
   --text-3: #575757
   --dark: #0A142F
   --white: #FFF
+  --blue: #152B65
 
 //variables
 $i: !important
@@ -14,9 +15,25 @@ $i: !important
 .container
   max-width: none
   padding: 0 20px
-  @media only screen and (max-width: 991px) and (min-width: 768px)
-    max-width: 720px
-    padding: 0 12px
+  // @media only screen and (max-width: 991px) and (min-width: 768px)
+  //   max-width: 720px
+  //   padding: 0 12px
+.btn
+  font-size: 14px
+.btn-primary
+  outline: none $i
+  box-shadow: none $i
+  background-color: var(--blue) $i
+  border-color: var(--blue) $i
+  &:hover, &:active
+    background-color: var(--dark) $i
+    border-color: var(--dark) $i
+.btn-lg
+  border-radius: 30px
+  font-size: 16px
+.form-label
+  font-size: 12px
+  margin: 0 0 4px
 
 .products-list-main
   display: flex
@@ -198,6 +215,7 @@ $i: !important
   display: inline-block
   overflow: hidden
   position: relative
+  width: 78.75px
   div
     display: flex
   .fa-star 
