@@ -1,0 +1,139 @@
+.dashboard-main
+  background: #F8F8F8
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  & > .container
+    flex: 1
+    display: flex
+    flex-direction: column
+  .no-results
+    margin: 40px 0 0
+.search-container
+  padding: 12px 20px
+  margin: 0 -20px
+  background-color: var(--white)
+.button-container
+  position: relative
+  padding: 20px
+  flex-direction: column
+  @media (min-width: 576px)
+    flex-direction: row
+  &::before
+    content: ""
+    position: absolute
+    width: 100vw
+    height: 1px
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+    background: rgba(10, 20, 47, 25%)
+  h3
+    font-family: 'Figtree', sans-serif
+    font-size: 22px
+    font-weight: 700
+    color: var(--text-1)
+    margin: 0 0 24px
+    @media (min-width: 576px)
+      margin: 0
+.products-table-container
+  padding: 30px 0
+  & > .table-row:not(.product-details-row)
+    margin: 0 0 30px
+    padding: 0 14px
+    font-size: 14px
+    font-weight: 700
+    color: var(--text-2)
+    display: none
+    @media (min-width: 768px)
+      display: flex
+.product-details-row
+  background: var(--white)
+  padding: 16px 14px
+  border-radius: 8px
+  font-size: 14px
+  &:not(:last-child)
+    margin: 0 0 16px
+  .img-wrapper
+    height: 50px
+    width: 50px
+  img
+    object-fit: contain
+    background: var(--white)
+  .prod-title
+    display: flex
+    justify-content: space-between
+    font-weight: 700
+    @media (min-width: 768px)
+      font-weight: 500
+    .img-wrapper
+      height: 80px
+      width: 80px
+      display: block
+      margin-left: 24px
+      @media (min-width: 768px)
+        display: none
+  .prod-actions
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    @media (min-width: 768px)
+      justify-content: flex-end
+    button
+      height: 40px
+      &:first-child
+        margin-right: 12px
+  span
+    display: block
+    font-weight: 700
+    @media (min-width: 768px)
+      display: none
+
+.table-row
+  font-family: 'Figtree', sans-serif
+  display: flex
+  gap: 24px
+  flex-direction: column
+  @media (min-width: 768px)
+    flex-direction: row
+  & > div
+    &:nth-child(1)
+      display: none
+    @media (min-width: 768px)
+      &:nth-child(1)
+        width: 50px
+        display: flex
+      &:nth-child(2)
+        width: 20%
+      &:nth-child(3)
+        width: 12%
+      &:nth-child(4)
+        width: calc(46% - 50px)
+      &:nth-child(5)
+        width: 10%
+        min-width: 70px
+        text-align: center
+      &:nth-child(6)
+        width: 12%
+        min-width: 92px
+        text-align: center
+.alert
+  opacity: 0
+  z-index: -1
+  -webkit-transition-property: opacity
+  transition-property: opacity
+  -webkit-transition-duration: 0.5s
+  transition-duration: 0.5s
+  -webkit-transition-timing-function: ease-out
+  transition-timing-function: ease-out
+  position: fixed
+  top: 20px
+  right: 20px
+  &.show-alert
+    opacity: 1
+    z-index: 1
+  p
+    margin: 0
+  .fa  
+    margin-right: .5em

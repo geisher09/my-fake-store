@@ -14,7 +14,7 @@ html {
   overflow-x: hidden;
 }
 
-body, #app, .products-list-main {
+body, #app, .products-list-main, .dashboard-main {
   min-height: 100vh;
 }
 
